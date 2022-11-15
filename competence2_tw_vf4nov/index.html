@@ -318,6 +318,7 @@
     <div v-for="product in products" class="mb-4 border-solid border-2 shadow-lg rounded-lg h-20 w-60 py- text-center bg-amber-200 lg:h-80 lg:w-80 lg:rounded-full lg:py-28"> 
           <p class="font-bold text-white text-2xl lg:text-5xl"> {{product}} </p>
     </div>
+    
 </section>
 <!-- _________________________ fin DECOUVRIR LES PLANTES AVEC >>> VUEJS <<<  _________________________ -->
 
@@ -554,24 +555,24 @@
         </ul>
       </div>
 <!-- ___________ div des 3 cards ___________ -->
-      <div class="my-6 lg:flex lg:justify-evenly">
-<!-- ___________ code card 1 ___________ -->
-        <div class="flex justify-center my-3">
+      <div id="app1" class="my-6 lg:flex lg:justify-evenly">
+<!-- ___________ code card avec VUEJS et AXIOS ___________ -->
+        <div v-for="item in items" class="flex justify-center my-3">
           <div class="rounded-lg shadow-lg bg-white max-w-sm">
             <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
-              <img class="rounded-t-lg" src="img/formule1.jpg" alt="plantes"/>
+              <img class="rounded-t-lg" :src=`${item.image}` alt="plantes"/>
             </a>
             <div class="p-6 text-center">
-              <h5 class="text-xl font-medium mb-2">EXPLORATION</h5>
+              <h5 class="text-xl font-medium mb-2"> {{item.titre}}</h5>
               <p class="text-base mb-4">
-                Découvrez en douceur le concept de Personal Herborist et ajoutez des notes herbacées dans votre quotidien.
+                {{item.description}}
               </p>
-              <p class="mb-4 font-semibold">Votre BOX : La base</p>
-              <button type="button" class=" inline-block px-6 py-2.5 bg-orange-900 opacity-75 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-orange-900 hover:shadow-lg focus:bg-orange-900 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-amber-200 active:shadow-lg transition duration-150 ease-in-out">Je me lance</button>
+              <p class="mb-4 font-semibold">{{item.box}}</p>
+              <button type="button" class=" inline-block px-6 py-2.5 bg-orange-900 opacity-75 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-orange-900 hover:shadow-lg focus:bg-orange-900 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-amber-200 active:shadow-lg transition duration-150 ease-in-out">{{item.bouton}}</button>
             </div>
           </div>
         </div>
-<!-- ___________ code card 2 ___________ -->
+<!-- ___________ code card 2 INITIAL 
         <div class="flex justify-center my-3">
           <div class="rounded-lg shadow-lg bg-white max-w-sm">
             <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
@@ -587,7 +588,8 @@
             </div>
           </div>
         </div>
-<!-- ___________ code card 3 ___________ -->
+        ___________ -->
+<!-- ___________ code card 3 INITIAL
         <div class="flex justify-center my-3">
           <div class="rounded-lg shadow-lg bg-white max-w-sm">
             <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
@@ -603,6 +605,7 @@
             </div>
           </div>
         </div>
+    ___________ -->
 
       </div>
 
@@ -610,44 +613,7 @@
 
 <!-- _________________________ debut SECTION ACHATS _________________________ -->
     
-    
-    <!-- _________________________ debut TEST FOOTER _________________________ 
-    <footer class="bg-red-200 opacity-50 my-3">
-      <ul class="flex text-center">
-        <li>Notre identité</li>
-        <li>Notre engagement</li>
-        <li>Nos services</li>
-      </ul>
-
-      <ul class="flex justify-around">
-        <li> Retrouvez-nous ! </li>
-        <li>Moyens de paiement<li>
-        <li>Mode de livraison</li>
-      </ul>
-      <div class="flex justify-evenly">
-        <ul class="flex"> 
-          <li> <i class="fa fa-facebook" aria-hidden="true"></i></i></li>
-          <li><i class="fa fa-pinterest" aria-hidden="true"></i></li>
-          <li><i class="fa fa-instagram" aria-hidden="true"></i> </li>
-        </ul>
-        <ul class="flex">
-          <li><i class="fa fa-credit-card" aria-hidden="true"></i></li> 
-          <li><i class="fa fa-lock" aria-hidden="true"></i></li>
-        </ul>
-        <ul class="flex">
-          <li><i class="fa fa-bicycle" aria-hidden="true"></i></li>
-          <li><i class="fa fa-shopping-basket" aria-hidden="true"></i></li>
-        </ul>
-      </div>
-
-      <ul class="flex" >
-        <li>CGU</li>
-        <li>Mentions légales</li>
-        <li>&copy; Personal Herborist</li>
-      </ul>
-    </footer>
-    
- _________________________ fin TEST FOOTER _________________________ -->
+   
 
 
 <!-- _________________________ début FOOTER _________________________ -->
@@ -900,4 +866,6 @@
   <script type="text/javascript" src="js/index.min.js"></script>
   <!-- Custom scripts -->
   <script type="text/javascript"></script>
+  
+
 </html>

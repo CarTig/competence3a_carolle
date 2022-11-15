@@ -1,0 +1,33 @@
+{
+
+    "items":[
+        {
+           "image": "img/formule1.jpg",
+           "titre": "EXPLORATION",
+           "description": "Découvrez en douceur le concept de Personal Herborist et ajoutez des notes herbacées dans votre quotidien.",
+           "box": "Votre BOX est : La base",
+           "bouton": "Je me lance"
+
+        },
+
+        {
+            "image": "img/formule3ter.jpg",
+            "titre": "CALME",
+            "description": "Soulager votre Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+            "box": "Votre BOX : L'apaisante",
+            "bouton": "Je me lance"
+ 
+         },
+
+         {
+            "image": "img/formule2bis.jpg",
+            "titre": "ENERGIE",
+            "description": "Boostez votre Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+            "box": "Votre BOX est : L'énergique",
+            "bouton": "Je me lance"
+ 
+         }
+
+
+    ]
+}
